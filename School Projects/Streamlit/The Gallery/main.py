@@ -3,7 +3,7 @@ from datetime import datetime, date, time
 import pandas as pd
 import uuid
 
-st.set_page_config(page_title="The Gallery", page_icon="TheGallery.png", layout="wide")
+st.set_page_config(page_title="The Gallery", page_icon="School Projects/Streamlit/The Gallery/TheGallery.png", layout="wide")
 
 if 'ToDo' not in st.session_state:
     st.session_state.ToDo = []
@@ -60,7 +60,7 @@ if current_page == "Welcome":
     col1, col2, col3 = st.columns([3,3,1.8])
 
     with col2:
-        st.image("TheGallery.png", width=100)
+        st.image("School Projects/Streamlit/The Gallery/TheGallery.png", width=100)
 
     st.title("Welcome to The Gallery")
     st.write("A personal Student Hub")
@@ -164,7 +164,7 @@ elif current_page == "Student Gallery":
         col1, col2, col3 = st.columns([3,3,1.8])
 
         with col2:
-            st.image("StudentGallery.png", width=120)
+            st.image("School Projects/Streamlit/The Gallery/StudentGallery.png", width=120)
 
         st.title("Student Gallery")
         
@@ -556,4 +556,5 @@ elif current_page == "Student Gallery":
                                 if st.button("Skip", use_container_width=True):
                                     st.session_state.flashcard_index = (st.session_state.flashcard_index + 1) % total_cards
                                     st.session_state.show_answer = False
+
                                     st.rerun()
